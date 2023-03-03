@@ -1,7 +1,12 @@
 ---
-title: Introduction
-nav: Intro
+title: Email Processing - Setting up an email and spreadsheet
+nav: Email Processing
 ---
+
+
+[Spreadsheet to Copy](https://docs.google.com/spreadsheets/d/1BDXax6L6kLwAHUoqA3Me9gipQWdRQb82aE3voDUEX48/edit#gid=0)
+
+https://raw.githubusercontent.com/anerb/GAS_email_processing/4ae49851f34fb0fa21973e0835c04b554a443223/addMenu.gs
 
 `workshop-template-b` is a Jekyll project to create a simple workshop website, with a [Bootstrap](https://getbootstrap.com/)-based theme, designed for hosting on [GitHub Pages](https://pages.github.com/) (or similar static web options!).
 
