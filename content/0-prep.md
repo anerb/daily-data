@@ -1,32 +1,46 @@
 ---
-title: Workshop Prep
-nav: Prep
-topics: GitHub; Optional Software
+title: Introduction
+nav: Intro
+topics: Tools, Personal Organization
 ---
 
-To create your own materials using `workshop-template-b`, please set up a free [GitHub account](https://github.com/join) if you do not have one already.
+DIDIT (Daily Individual Data Input Tools) is a collection of digital tools to help you personally collect and organize data you care about.
 
-Basic familiarity with the GitHub web interface will be helpful.
-For a quick introduction check out GitHub's [Hello World guide](https://guides.github.com/activities/hello-world/), or the extensive [GitHub Learning Lab](https://lab.github.com/).
+The data is you collect is for your own personal use and stays as private as if you had recorded it manually yourself.
 
-This template works great using only GitHub's web interface for editing--you don't have to install anything!
-However, for more advanced uses you will want Git, Ruby, and Jekyll installed on your computer to do local development.
-
-{% capture text %}
-1. Have a [GitHub](https://github.com) account.
-2. *Very Optional:* have [Git](https://git-scm.com/), [Jekyll](https://jekyllrb.com/), and a nice [text editor](https://code.visualstudio.com/) installed.
-{% endcapture %}
-{% include card.html text=text header="Setup Overview" %}
-
-> *Tip:* for easier editing of your project in your browser, you can click `.` on any GitHub repository to [open the web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (which is a version of [Visual Studio Code](https://code.visualstudio.com/) editor)!
->
-> *Tip:* you could also use this template on GitLab or other hosting service. GitHub is handy for easily creating and sharing projects, however, it is not a dependency!
-
+There are two main parts to the organizing your daily data
+  1. Convenient ways to capture or input the data (e.g. the price on a purchase you made, or the fact that you took today's pill.)
+  2. An accessible place to store the data for you to use however you want.
 -------------
 
-## Local Jekyll Setup [very optional]
+## Capturing your data
 
-If you want to develop and preview your website project on your local computer (or deploy it some where other than GitHub Pages), you will need to install Git version control and the static site generator [Jekyll](https://jekyllrb.com/).
+Capturing data is hard.  Anyone who tells you "Just write down every time you eat a snack." is making the word *just* do a lot of work in that sentence.
+
+Mini apps on your phone are an important part of making recording the moment as simple as possible (but no simpler).
+
+Here are some example mini apps that work with the DIDIT mentality
+ - **Spendior** - Record every time you spend money on something.
+ - **Selfmore** - Record health data about your self to help you take better care of your self. (Don't be selfless, be selfmore.)
+   - Not yet ready - coming soon.
+ - **Promistake** - Takes down a record of your promises.  Helps you avoid the mistake of forgetting to keep a promise.
+   - Not yet ready - I'm not promising anything.
+
+### Mini app philosophy
+The mini apps work for you.  They do not send data to any servers, and they don't make anything up.  This is about helping you with interfaces customized to certain data-entry tasks.  This is not about collecting data for you that aren't inputing yourself.
+
+To meet this philosophy, DIDIT mini apps use email to send the data for off your phone.  By using your email, the apps let you have full control over what gets sent from your phone, and it remains as private as sending an email to yourself.
+
+## Storing the data
+
+For better or worse, email is a basic means of communication that nearly everyone has access to.  DIDIT relies on email as sort of [Pub/Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) system for the world.
+
+Email2Sheet is designed around Google's Apps Script framework to process incoming emails (to a Gmail account) and store their information in a Google Sheet[¹].
+
+
+
+[^1] Similar systems could potentially be built around Micorosft's Outlook/Excel or Apple's iCloud Mail/Numbers, and open source projects like Proton Mail/LibreOffice.  For now, Google's Gmail/Sheets is recommended even if you don't regularly use the Google ecosystem.  There are [ways](https://www.freshtechtips.com/2021/11/sync-excel-google-sheet.html) to bring the data into Excel or other formats you may prefer to work with.  As mentioned above, the goal of DIDIT is to collect and reliably store records.  What you do with the data from there is up to you.
+
 
 ### Install Git
 
