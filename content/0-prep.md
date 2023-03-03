@@ -36,8 +36,9 @@ To meet this philosophy, DIDIT mini apps use email to send the data for off your
 For better or worse, email is a basic means of communication that nearly everyone has access to.  DIDIT relies on email as sort of [Pub/Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) system for the world.
 
 Email2Sheet is designed around Google's Apps Script framework to process incoming emails (to a Gmail account) and store their information in a Google Sheet[¹].
+You create a spreadsheet and determine an email filter to capture the emails that should be processed.  Every 15 minutes, the emails that match your filter will have their contents converted into a new row in the spreadsheet.
 
-
+The emails get sent from your account to your account.  It is recommended to create a fresh Gmail account that you will own and will be the email that recieves the data from the mini apps.
 
 [^1] Similar systems could potentially be built around Micorosft's Outlook/Excel or Apple's iCloud Mail/Numbers, and open source projects like Proton Mail/LibreOffice.  For now, Google's Gmail/Sheets is recommended even if you don't regularly use the Google ecosystem.  There are [ways](https://www.freshtechtips.com/2021/11/sync-excel-google-sheet.html) to bring the data into Excel or other formats you may prefer to work with.  As mentioned above, the goal of DIDIT is to collect and reliably store records.  What you do with the data from there is up to you.
 
